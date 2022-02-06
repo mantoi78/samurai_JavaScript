@@ -1,0 +1,17 @@
+<body>
+    <button id="btn">追加</button>
+    <ul id="list"></ul>
+
+    <script>
+        //ここにJabaScriptコードを記述する
+        const list = document.getElementById('list');
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', () => {
+            const li = document.createElement('li'); //li要素を生成する
+
+            li.textContent = 'これはリスト要素です'; //li要素にテキストを追加する
+            list.appendChild(li); //li要素をul要素内に追加して表示する
+        })
+    </script>
+</body>

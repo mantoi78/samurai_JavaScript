@@ -1,0 +1,9 @@
+<body>
+    <script>
+        const url = 'https://qiita.com/api/v2/tags/javascript/items';
+
+        fetch(url)
+        .then(data => data.json()) //JSONデータとして取得する
+        .then(data => console.log(data))
+    </script>
+</body>

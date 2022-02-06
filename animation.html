@@ -1,0 +1,16 @@
+<body>
+    <h1 id="text">こんにちは</h1>
+
+    <script>
+        //JavaScriptを記述する場所
+        const h1 = document.getElementById("text");
+        let count = 0;
+
+        const timerID = setInterval(() => {
+            h1.style.fontSize = count + `px`;
+            count++;
+            //繰り返し処理を止める
+            if(count >= 100) clearInterval(timerID);
+        }, 10);
+    </script>
+</body>

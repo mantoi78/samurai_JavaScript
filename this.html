@@ -1,0 +1,13 @@
+<body>
+    <script>
+        const obj = {
+
+            getThis1: function() { return this },
+
+            getThis2: () => this
+        };
+
+        console.log(obj.getThis1());
+        console.log(obj.getThis2());
+    </script>
+</body>

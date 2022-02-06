@@ -1,0 +1,20 @@
+<body>
+    <form name="myForm">
+        <input type="radio" name="area" value="tokyo" />東京都
+        <input type="radio" name="area" value="aichi" />愛知県
+        <input type="radio" name="area" value="osaka" />大阪府
+    </form>
+
+    <button id="btn">実行</button>
+　
+    <script>
+        //ここにJavaScriptを記述する
+        const btn = document.getElementById('btn');
+
+        btn.addEventListener('click', () => {
+            const form = document.forms.myForm;
+
+            console.log(form.area.value);
+        });
+    </script>
+</body>

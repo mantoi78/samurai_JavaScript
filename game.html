@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScriptの練習</title>
+</head>
+<body>
+<script>
+let enemy = 10;
+let command;
+
+// 攻撃力
+let random;
+
+while(true) {
+    // 引数に与えたテキストと、入力フォームが表示される
+    command = prompt("敵が現れた！([1]攻撃 [2]逃げる)");
+
+    //0~9が入ってる ※攻撃力
+    random = Math.floor(Math.random() *10);
+
+    // 入力値をチェック 1 or 2
+    if(command === "1") {
+        // [攻撃]を選択した場合
+        enemy = enemy - random;
+
+        console.log(random + "の攻撃！");
+        if (enemy <= 0) {
+            console.log("敵を倒した！");
+            break;
+        }
+
+        console.log("敵の体力は残り" + enemy + "です");
+    } else if(command === "2") {
+        //[逃げる]を選択した場合
+
+        console.log("無事に逃げました");
+        break;
+    }
+}
+
+console.log("ゲーム終了");
+
+</script>
+</body>
+</html>
